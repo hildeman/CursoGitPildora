@@ -1,0 +1,81 @@
+Comados git
+
+git init -> cuando queremos que git haga un siguimiento de nuestro proyecto
+            este comando crea dos area a su vez este comando solo se utiliza 
+            una vez:
+            
+            	1 area de ensayo (staging area) = es un area temporal
+            	2 repositorio local = donde se almacenan las instantanea de nuestro proyecto
+
+warning:
+
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
+ayuda: 
+ayuda:  git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda:  git branch -m <nombre>
+
+…or create a new repository on the command line
+echo "# CursoGitPildora" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hildeman/CursoGitPildora.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/hildeman/CursoGitPildora.git
+git branch -M main
+git push -u origin main
+
+*******************************************************************************
+
+git add -> el comando que tenemos que indicarle a git para que haga un seguiminto
+           de nuestros archivos sea uno o todos
+           con esto conseguimos que pasemos los archivos desde el directorio 
+           de trabajo al area de esnsayo(staging area) 
+           
+           ej: git add index.html =  este archivo esta en el area de ensayo
+           
+git add . -> con este comando agregamos tosos los archivos del directoria 
+             al area de ensayo
+                                     
+
+
+git commit -> con este comando pasamos el archivo al del area de ensayo al repositorio
+              local 
+              
+              para hacer una instantanea utizamos este comando
+              
+              git commit -m "nombre del commit"
+              
+              siempre que se modifique el archivo hay y queremos guardar hasta ese 
+              punto el codigo debemos hacer un git add y luego un commit
+              
+Nota: si es la primera vez que utilizanos git nos pedira que configuremos 
+
+	git config --global user.email "you@example.com"
+  	git config --global user.name "Tu Nombre"              
+	              
+             
+git commit -am "nombre del commit" -> con este comando agregas al area de ensayo y al repositorio local              
+              
+git status -s -> con este comando consultamos que archivos le estamos haciendo  seguimiento
+                 cuando nos colocas ?? siggnifia que no esta haciendo seguimiento al archivo
+                 o ah varios archivos y subdirectorios
+
+git log --oneline -> con este comando vemos una lista de todos los commit
+                         
+                         
+git reset --hard codigo de la instantanea -> con esto retrocedemos a una instantanea inferior al proyecto
+
+git commit --a
+                        
+
